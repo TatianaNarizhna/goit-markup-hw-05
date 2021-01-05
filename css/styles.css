@@ -107,6 +107,12 @@ a {
   letter-spacing: 0.02em;
 }
 
+.list .active {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
 .list .active:hover,
 .list .active:focus {
   color: var(--accent-color);
@@ -541,6 +547,10 @@ a {
 
   background-color: var(--white-hero-color);
   fill: var(--network-color);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: var(--timing-function), var(--timing-function);
 }
 
 .master-flex:focus,
@@ -590,6 +600,10 @@ a {
   height: 100%;
   fill: var(--network-color);
   border: 1px solid var(--network-color);
+
+  transition-property: border-color, fill;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: var(--timing-function), var(--timing-function);
 }
 
 .clients-flex:hover,
@@ -662,6 +676,10 @@ a {
 
   border-style: none;
   outline: none;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .list .projects {
@@ -742,10 +760,6 @@ a {
   padding-bottom: 60px;
 }
 
-.footer .list-footer {
-  color: var(--transparent-gray);
-}
-
 .footer .adress-footer,
 .footer .list-footer {
   display: block;
@@ -762,6 +776,14 @@ a {
 
 .footer .item:last-child {
   margin-bottom: 0;
+}
+
+.footer .list-footer {
+  color: var(--transparent-gray);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .footer .list-footer:hover,
@@ -796,6 +818,10 @@ a {
   border-radius: 50%;
   fill: var(--secondary-bgc-white);
   background: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .join-master:hover,
