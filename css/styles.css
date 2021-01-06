@@ -23,6 +23,7 @@
   --hero-bgc-color: #c4c4c4;
   --network-color: #afb1b8;
   --skills-bgc-position: rgba(47, 48, 58, 0.8);
+
   --backdrop: rgba(0, 0, 0, 0.2);
   --thumb-overlay-color: rgba(33, 150, 243, 0.9);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,7 +130,7 @@ a {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
@@ -219,6 +220,7 @@ a {
     ),
     url('../imagesoptimized/hero\ img.jpg');
   background-color: var(--hero-bgc-color);
+  border-top: 1px solid var(--border);
 }
 
 /* модальное окно */
@@ -743,6 +745,7 @@ a {
 /* Портфолио оверлей */
 .overlay-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .overlay-text {
@@ -754,44 +757,31 @@ a {
   padding: 63px 24px;
   margin: 0;
 
-  /* opacity: 0; */
-
   font-weight: normal;
   font-size: 18px;
   line-height: 1.55;
   color: var(--white-hero-color);
 }
 
-.table-block:hover .overlay-text,
-.table-block:focus .overlay-text {
-  opacity: 1;
-}
-
-/* .overlay-thumb {
-  overflow: hidden;
-} */
-
 .overlay-transform {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
+  background-color: var(--thumb-overlay-color);
   transform: translateY(100%);
+
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-
-  background-color: var(--thumb-overlay-color);
-}
-
-.overlay-transform:hover,
-.overlay-transform:focus {
-  opacity: 1;
 }
 
 .table-block:hover .overlay-transform,
 .table-block:focus .overlay-transform {
   transform: translateY(0);
+  opacity: 1;
 }
 
 /* footer */
