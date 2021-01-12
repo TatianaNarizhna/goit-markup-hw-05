@@ -136,15 +136,11 @@ a {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-  opacity: 0;
+  opacity: 1;
 
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-}
-
-.underline:hover::after {
-  opacity: 1;
 }
 
 /* flex address */
